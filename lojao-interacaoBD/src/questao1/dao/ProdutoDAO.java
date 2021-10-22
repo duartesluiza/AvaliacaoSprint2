@@ -65,7 +65,7 @@ public class ProdutoDAO {
 	}
 	
 	public void deletarProduto(Integer produtoId) throws SQLException {
-		
+		// "didinha = pelido para chamar a tabela
 		String sql = "DELETE FROM PRODUTO as didinha WHERE didinha.ID = "+produtoId;
 		
 		try (PreparedStatement pstm = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {

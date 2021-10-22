@@ -74,15 +74,39 @@ public class Menu {
 
 	}
 
-	private void atualizarProduto(Scanner teclado) throws SQLException {
+	private void atualizarProduto(Scanner scanner) throws SQLException {
+		try (Scanner input = new Scanner(System.in)) {
+			System.out.println("Iniciando UPDATE de produto... \n");
 
+			
 
+			System.out.println("\nInforme o nome do Produto que deseja atualizar: ");
+			String nomeProduto = scanner.next();
+			
+			System.out.println("\nInforme a descriçao do produto: ");
+			String descricaoProduto = scanner.next();
+			
+			System.out.println("\nInforme o desconto do produto: ");
+			String descontoProduto = scanner.next();
+			
+			System.out.println("\nInforme a data de inicio da promoção do produto: ");
+			String dataInicioProduto = scanner.next();
+			
+			System.out.println("\nInforme a data de fim da promoção do produto: ");
+			String dataFimProduto = scanner.next();
+			
+			
+			Produto produto = new Produto(nomeProduto, descricaoProduto, descontoProduto, dataInicioProduto,
+					dataFimProduto);
+			
+			produtoDao.editarProduto(produto);
+		}
 	}
 
 	public void cadastrarProduto(Scanner scanner) throws SQLException {
 
-		System.out.println("Iniciando cadastro de produto \n");
-//		System.out.println("Informe nome do produto");
+		System.out.println("Iniciando cadastro de produto... \n");
+
 
 		System.out.println("Nome do Produto informado: \n");
 		String nomeProduto = scanner.next();

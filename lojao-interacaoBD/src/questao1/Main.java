@@ -20,6 +20,7 @@ public class Main {
 		
 		ProdutoDAO produtoDAO = new ProdutoDAO(connection);
 		
+		@SuppressWarnings("unused")
 		Menu menu = new Menu(produtoDAO);
 			
 		produtoDAO.salvarProduto(p1);
