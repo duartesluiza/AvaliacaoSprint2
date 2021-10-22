@@ -110,12 +110,16 @@ public class Menu {
 
 		System.out.println("Nome do Produto informado: \n");
 		String nomeProduto = scanner.next();
+		
 		System.out.println("Informe a descriçao do produto: \n");
 		String descricaoProduto = scanner.next();
+		
 		System.out.println("Informe o desconto do produto: \n");
 		String descontoProduto = scanner.next();
+		
 		System.out.println("Informe a data de inicio da promoção do produto: \n");
 		String dataInicioProduto = scanner.next();
+		
 		System.out.println("Informe a data de fim da promoção do produto: \n");
 		String dataFimProduto = scanner.next();
 
