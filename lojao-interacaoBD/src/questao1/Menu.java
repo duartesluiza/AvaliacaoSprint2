@@ -25,7 +25,8 @@ public class Menu {
 				System.out.println("1- Cadastrar");
 				System.out.println("2- Atualizar");
 				System.out.println("3- Excluir");
-				System.out.println("4- PARA SAIR APERTE 0");
+				System.out.println("4- Listar");
+				System.out.println("5- PARA SAIR APERTE 0");
 
 				escolha = teclado.nextInt();
 
@@ -33,7 +34,6 @@ public class Menu {
 
 				case 1:
 					cadastrarProduto(teclado);
-
 					break;
 
 				case 2:
@@ -45,7 +45,7 @@ public class Menu {
 					break;
 
 				case 4:
-					break;
+					listarProduto(teclado);
 
 				case 0:
 					System.out.println("\nSaindo...");
@@ -60,16 +60,16 @@ public class Menu {
 		}
 	}
 
+
+
 	private void deletarProduto(Scanner scanner) throws SQLException {
-		// TODO Auto-generated method stub
-		System.out.println("Deletar oferta");
-		System.out.println("PARA SAIR APERTE ZERO");
+		
+		System.out.println("Você está prestes a deletar uma oferta");
+		
+		System.out.println("Digite o Id do produto que você deseja deletar");
 		Integer produtoId = scanner.nextInt();
 		
-		
-		
-		
-
+	
 		produtoDao.deletarProduto(produtoId);
 
 	}
@@ -129,8 +129,22 @@ public class Menu {
 		produtoDao.salvarProduto(produto);
 
 	}
+	
+	
+	
+	
+	private void listarProduto(Scanner teclado) throws SQLException {
+		System.out.println("Lista de produtos:");
+		
+	
+		
+		produtoDao.listarProdutos(produtoDao);
+	}
+	
 
 }
+
+
 	
 		
 //		String nomeProduto = scanner.next();

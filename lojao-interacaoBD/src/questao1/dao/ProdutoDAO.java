@@ -76,7 +76,7 @@ public class ProdutoDAO {
 		
 	}
 
-	public List<Produto> listarProdutos() throws SQLException {
+	public List<Produto> listarProdutos(ProdutoDAO produtoDao) throws SQLException {
 
 		String sql = "SELECT * FROM PRODUTO";
 

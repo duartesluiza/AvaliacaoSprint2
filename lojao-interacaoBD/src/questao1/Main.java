@@ -31,7 +31,7 @@ public class Main {
 		
 //		produtoDAO.deletarProduto(30);
 		
-		produtoDAO.listarProdutos();
+		produtoDAO.listarProdutos(produtoDAO);
 		
 	}
 	
